@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex bg-gray-100 min-h-screen">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-blue-700 text-white flex flex-col p-4">
+    <div class="text-2xl font-bold mb-8">Your Store</div>
+    <nav class="space-y-4">
+      <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded">
+        <span>🏠</span><span>Dashboard</span>
+      </a>
+      <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded">
+        <span>📦</span><span>Orders</span>
+      </a>
+      <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded">
+        <span>🛍️</span><span>Products</span>
+      </a>
+      <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded">
+        <span>👥</span><span>Customers</span>
+      </a>
+      <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded">
+        <span>📈</span><span>Reports</span>
+      </a>
+      <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded">
+        <span>⚙️</span><span>Settings</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-6">
+    <!-- Top Navbar -->
+    <div class="flex justify-between items-center mb-6">
+      <h1 class="text-xl font-bold">Admin Dashboard</h1>
+      <div class="flex items-center space-x-4">
+        <input type="text" placeholder="Search..." class="px-2 py-1 border rounded">
+        <span>🛒</span>
+        <span>🔔</span>
+      </div>
+    </div>
+
+    <!-- Page Header -->
+    <div class="mb-6">
+      <h2 class="text-2xl font-bold">Admin Dashboard</h2>
+      <p class="text-gray-600">Manage your store effectively</p>
+      <div class="mt-4 space-x-2">
+        <button class="bg-blue-600 text-white px-4 py-2 rounded">Add Product</button>
+        <button class="bg-green-600 text-white px-4 py-2 rounded">Generate Report</button>
+      </div>
+    </div>
+
+    <!-- Overview Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div class="bg-white p-4 rounded shadow">
+        <div class="text-gray-500">Total Orders</div>
+        <div class="text-2xl font-bold">1,250</div>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <div class="text-gray-500">Total Revenue</div>
+        <div class="text-2xl font-bold">$45,000</div>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <div class="text-gray-500">New Customers</div>
+        <div class="text-2xl font-bold">300</div>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <div class="text-gray-500">Products in Stock</div>
+        <div class="text-2xl font-bold">1,080</div>
+      </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+      <div class="bg-white p-6 rounded shadow text-center">[Sales Chart Placeholder]</div>
+      <div class="bg-white p-6 rounded shadow text-center">[Traffic Source Pie Chart Placeholder]</div>
+    </div>
+
+    <!-- Recent Orders Table -->
+    <div class="bg-white rounded shadow p-4 mb-6 overflow-x-auto">
+      <h3 class="text-lg font-bold mb-4">Recent Orders</h3>
+      <table class="min-w-full">
+        <thead>
+          <tr class="text-left border-b">
+            <th class="p-2">Order ID</th>
+            <th class="p-2">Customer</th>
+            <th class="p-2">Product</th>
+            <th class="p-2">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b">
+            <td class="p-2">#1234</td>
+            <td class="p-2 flex items-center space-x-2">
+              <img src="doctor.png" class="w-6 h-6 rounded-full" alt="">
+              <span>Jane Doe</span>
+            </td>
+            <td class="p-2">Smartphone</td>
+            <td class="p-2">2025-07-19</td>
+          </tr>
+          <tr class="border-b">
+            <td class="p-2">#1235</td>
+            <td class="p-2 flex items-center space-x-2">
+              <img src="doctor.png" class="w-6 h-6 rounded-full" alt="">
+              <span>John Smith</span>
+            </td>
+            <td class="p-2">Headphones</td>
+            <td class="p-2">2025-07-18</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Product Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      <div class="bg-white p-4 rounded shadow">
+        <img src="lap.png" alt="Product" class="mb-2 rounded">
+        <div class="font-bold">Laptop</div>
+        <div class="text-gray-600">$999 - In Stock</div>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <img src="smart.png" alt="Product" class="mb-2 rounded">
+        <div class="font-bold">Smartwatch</div>
+        <div class="text-gray-600">$199 - Out of Stock</div>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <img src="tab.png" alt="Product" class="mb-2 rounded">
+        <div class="font-bold">Tablet</div>
+        <div class="text-gray-600">$499 - Low Stock</div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
